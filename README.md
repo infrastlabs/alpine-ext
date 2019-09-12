@@ -1,10 +1,10 @@
-# alpine-ext
+# Alpine-ext
 
 ## Intro
 
 > Basic top alpine docker images with tmux/lrzsz/gosu/... and other init sys soft and dotfiles aim at lite and better image use. 
 
-Image based on `alpine-3.8_glibc-2.28` from `frolvlad/alpine-glibc`
+ **[Alpine-ext](https://hub.docker.com/r/infrastlabs/alpine-ext)** Image based on `alpine-3.8_glibc-2.28` from `frolvlad/alpine-glibc`
 
 ### Tags
 
@@ -14,7 +14,7 @@ Image based on `alpine-3.8_glibc-2.28` from `frolvlad/alpine-glibc`
 
 ### Features
 
-alpine-ext with following features:
+Alpine-ext with following features:
 
 * apk mirror aliyun/ustc
 * TIMEZONE Asia/Shanghai
@@ -141,5 +141,5 @@ docker push $repo/$ns/alpine-ext:$ver
 
 ## Contribute
 
-alpine-ext is an open source project under the Apache 2.0 license, and contributions are gladly welcomed!
+Alpine-ext is an open source project under the Apache 2.0 license, and contributions are gladly welcomed!
 To submit your changes please open a pull request.
