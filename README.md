@@ -1,6 +1,6 @@
 # Alpine-ext
 
-> Lite and better use image based on alpine with tmux/lrzsz/gosu/... and other init sys soft and dotfiles.(~30MB) 
+> Lite secure and better use image based on alpine with tmux/lrzsz/gosu/... and other init sys soft and dotfiles.(~30MB) 
 
 ## QuickStart
 
