@@ -117,6 +117,8 @@ docker inspect frolvlad/alpine-glibc:alpine-3.8_glibc-2.28 -f "{{.RepoDigests}}"
 
 - tmux
 
+Tmux 2.3, vim compatible with vim 8.1
+
 ```bash
 entry:
 tmux #new
@@ -133,16 +135,19 @@ split h: super + -
 
 - gosu
 
+* Avoid use su with a external pid and interactive promotion for password.
+* First in give suid to normal user when img built, Then when your container first startup you can do sth with root for the initial(remember to drop suid with gosu).
+
 ```bash
 sudo su 
-gosuctl add
+gsc add xxx
 exit
 gosu root ls -la ~
 ```
 
 ```bash
 sudo su
-gosuctl drop
+gsc drop
 exit
 gosu root ls -la ~
 ```
