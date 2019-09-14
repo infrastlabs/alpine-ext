@@ -2,7 +2,7 @@
 
 ## Intro
 
-> Basic top alpine docker images with tmux/lrzsz/gosu/... and other init sys soft and dotfiles aim at lite and better image use. 
+> Lite and better use image based on alpine with tmux/lrzsz/gosu/... and other init sys soft and dotfiles.(~30MB) 
 
  **[Alpine-ext](https://hub.docker.com/r/infrastlabs/alpine-ext)** Image based on `alpine-3.8_glibc-2.28` from `frolvlad/alpine-glibc`. (Size at ~30MB)
 
@@ -39,6 +39,37 @@ The environment variables can be used to configure SSH server
 | TIMEZONE      | Asia/Shanghai  |  China  |
 | LANG          | C.UTF-8        |         |
 | VER           | v1.0           |         |
+
+### Security
+
+- CAIID
+
+```
+docker inspect frolvlad/alpine-glibc:alpine-3.8_glibc-2.28 -f "{{.RepoDigests}}"
+[frolvlad/alpine-glibc@sha256:51d816dfedfaf89e52319add7cf5849dbf7295ec8980ca4a58ac963aa1485a10]
+```
+
+- user with entry (none root)
+
+- suid sgid
+
+`for i in $(find / -type f \( -perm +6000 -o -perm +2000 \)); do chmod ug-s $i; done`
+
+```
+/usr/bin/passwd
+/usr/bin/chage
+/usr/bin/sudo
+/usr/bin/chfn
+/usr/bin/newgrp
+/usr/bin/chsh
+/usr/bin/expiry
+/usr/bin/gpasswd
+/bin/busybox
+/bin/su
+/sbin/unix_chkpwd
+```
+
+- image check: [dive](https://github.com/wagoodman/dive) [clair](https://github.com/coreos/clair) (TODO)
 
 ## Use
 
