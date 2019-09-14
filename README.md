@@ -1,8 +1,46 @@
 # Alpine-ext
 
-## Intro
-
 > Lite and better use image based on alpine with tmux/lrzsz/gosu/... and other init sys soft and dotfiles.(~30MB) 
+
+## QuickStart
+
+`docker run -it --rm -u root infrastlabs/alpine-ext bash`
+(run with container's user `root`)
+
+![](images/apine-ext-tmux.png)
+
+`docker run -it --rm infrastlabs/alpine-ext:example`
+(exec in bash: `su` with root's pw `root`)
+
+```bash
+#!/usr/bin/env bash
+echo $@
+
+#scripts to run
+file=/tmp/gosu-root.sh
+cat > $file <<EOF
+ls -la /root
+chown -R www:www /srv #test
+erpasswd root
+epasswd root root  #rechange root's pw to: root (example with weak password)
+gsc drop #add this
+EOF
+chmod +x $file
+
+printf "\ngosu exec as root:\n"
+gosu root bash -c $file && rm -f $file
+
+printf "\nvalidate dropd permission:\n"
+gosu root ls -la /root
+gsc add entry
+
+exec /bin/bash
+```
+
+![](images/example-grpasswd-gosu.png)
+
+
+## Intro
 
  **[Alpine-ext](https://hub.docker.com/r/infrastlabs/alpine-ext)** Image based on `alpine-3.8_glibc-2.28` from `frolvlad/alpine-glibc`. (Size at ~30MB)
 
@@ -71,42 +109,7 @@ docker inspect frolvlad/alpine-glibc:alpine-3.8_glibc-2.28 -f "{{.RepoDigests}}"
 
 - image check: [dive](https://github.com/wagoodman/dive) [clair](https://github.com/coreos/clair) (TODO)
 
-## Use
-
-- docker run
-
-`docker run -it --rm -u root infrastlabs/alpine-ext bash`  (run with container's user `root`)
-
-![](images/apine-ext-tmux.png)
-
-`docker run -it --rm infrastlabs/alpine-ext:example` (exec in bash: `su` with root's pw `root`)
-
-```bash
-#!/usr/bin/env bash
-echo $@
-
-#scripts to run
-file=/tmp/gosu-root.sh
-cat > $file <<EOF
-ls -la /root
-chown -R www:www /srv #test
-erpasswd root
-epasswd root root  #rechange root's pw to: root (example with weak password)
-gsc drop #add this
-EOF
-chmod +x $file
-
-printf "\ngosu exec as root:\n"
-gosu root bash -c $file && rm -f $file
-
-printf "\nvalidate dropd permission:\n"
-gosu root ls -la /root
-gsc add entry
-
-exec /bin/bash
-```
-
-![](images/example-grpasswd-gosu.png)
+## Usage
 
 - gosu
 
