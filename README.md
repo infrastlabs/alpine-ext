@@ -135,8 +135,8 @@ split h: super + -
 
 - gosu
 
-* Avoid use su with a external pid and interactive promotion for password.
-* First in give suid to normal user when img built, Then when your container first startup you can do sth with root for the initial(remember to drop suid with gosu).
+Avoid use su with a external pid and interactive promotion for password.  
+> First in give suid to normal user when img built, Then when your container first startup you can do sth with root for the initial(remember to drop suid with gosu).
 
 ```bash
 sudo su 
