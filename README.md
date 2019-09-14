@@ -14,6 +14,7 @@
 
 `docker run -it --rm infrastlabs/alpine-ext:example`
 
+`entry.sh` in example:
 
 ```bash
 #!/usr/bin/env bash
