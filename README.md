@@ -60,8 +60,8 @@ Alpine-ext with following features:
 
 * apk mirror aliyun/ustc
 * TIMEZONE Asia/Shanghai
-* bin: gosu, lrzsz, tmux
-* apk: curl wget sed grep gawk sudo tree unzip procps htop bash bash-completion vim
+* bin: tmux, gosu, lrzsz
+* apk: curl wget sed grep gawk findutils sudo tree unzip procps htop bash bash-completion vim
 * dotfiles: .bashrc .profile .tmux.conf
 * gosuctl: gsc add xxx; gsc drop
 * user: root; entry
