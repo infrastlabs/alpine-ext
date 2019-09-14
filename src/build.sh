@@ -16,11 +16,12 @@ echo "http://$domain/alpine/v3.8/community" >> /etc/apk/repositories
 #procps: free -h
 #shadow: chpasswd jumpserver, expect<mkpasswd>
 #tmux: libevent ncurses (2.7-VimEnter-err, by hand with low ver); compile with src: v2.3
+#findutils: for k3s agent node.
 #coreutils: base64 for secrets
 #busybox-extras: telnet  ## nc -vzw 2 host port
 apk add --no-cache \
 ca-certificates tzdata curl wget \
-sed grep gawk sudo tree unzip procps htop \
+sed grep gawk findutils sudo tree unzip procps htop \
 expect shadow xterm bash bash-completion coreutils busybox-extras \
 libevent ncurses openssl vim #git
 
