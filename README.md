@@ -84,14 +84,16 @@ The environment variables can be used to configure SSH server
 
 ### Security
 
+- user with entry (none root)
+
+- image check: [dive](https://github.com/wagoodman/dive) [clair](https://github.com/coreos/clair) (TODO)
+
 - CAIID
 
 ```
 docker inspect frolvlad/alpine-glibc:alpine-3.8_glibc-2.28 -f "{{.RepoDigests}}"
 [frolvlad/alpine-glibc@sha256:51d816dfedfaf89e52319add7cf5849dbf7295ec8980ca4a58ac963aa1485a10]
 ```
-
-- user with entry (none root)
 
 - suid sgid
 
@@ -110,8 +112,6 @@ docker inspect frolvlad/alpine-glibc:alpine-3.8_glibc-2.28 -f "{{.RepoDigests}}"
 /bin/su
 /sbin/unix_chkpwd
 ```
-
-- image check: [dive](https://github.com/wagoodman/dive) [clair](https://github.com/coreos/clair) (TODO)
 
 ## Usage
 
