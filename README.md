@@ -58,8 +58,8 @@ exec /bin/bash
 
 Alpine-ext with following features:
 
-* apk mirror aliyun/ustc
-* TIMEZONE Asia/Shanghai
+* apk mirror aliyun/ustc (China)
+* TIMEZONE Asia/Shanghai (China)
 * bin: tmux, gosu, lrzsz
 * apk: curl wget sed grep gawk findutils sudo tree unzip procps htop bash bash-completion vim
 * dotfiles: .bashrc .profile .tmux.conf
