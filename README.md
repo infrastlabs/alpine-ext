@@ -135,21 +135,26 @@ split h: super + -
 
 - gosu
 
-Avoid use su with a external pid and interactive promotion for password.  
+Avoid to use su with a external pid and interactive promotion for password.  
 > First in give suid to normal user when img built, Then when your container first startup you can do sth with root for the initial(remember to drop suid with gosu).
 
 ```bash
-sudo su 
-gsc add xxx
-exit
-gosu root ls -la ~
+gsc add xxx #exec when img build
 ```
 
 ```bash
-sudo su
-gsc drop
-exit
-gosu root ls -la ~
+#scripts to run
+file=/tmp/gosu-root.sh
+cat > $file <<EOF
+ls -la /root
+chown -R www:www /srv #test
+erpasswd root
+gsc drop #drop suid of gosu, for safety
+EOF
+chmod +x $file
+
+printf "gosu exec as root:(exec when container fist startup)"
+gosu root bash -c $file && rm -f $file
 ```
 
 - lrzsz
