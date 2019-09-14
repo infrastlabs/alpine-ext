@@ -1,6 +1,6 @@
 # Alpine-ext
 
-> Lite secure and better use image based on alpine with tmux/lrzsz/gosu/... and other init sys soft and dotfiles.(~30MB) 
+> Lite secure and better use image based on alpine with tmux/gosu/lrzsz/... and other init sys soft and dotfiles.(~30MB) 
 
 ## QuickStart
 
@@ -115,6 +115,22 @@ docker inspect frolvlad/alpine-glibc:alpine-3.8_glibc-2.28 -f "{{.RepoDigests}}"
 
 ## Usage
 
+- tmux
+
+```bash
+entry:
+tmux #new
+tmux att -dt 0 #exist
+```
+
+```
+control:
+  super: ctrl+a
+split v: super + \
+split h: super + -
+   move: super + up/down/left/right 
+```
+
 - gosu
 
 ```bash
@@ -131,20 +147,13 @@ exit
 gosu root ls -la ~
 ```
 
-- tmux
+- lrzsz
 
-```bash
-entry:
-tmux #new
-tmux att -dt 0 #exist
-```
+When in windows or ZModem supported, you can use rz/sz for quick file transmission
 
 ```
-control:
-  super: ctrl+a
-split v: super + \
-split h: super + -
-   move: super + up/down/left/right 
+  upload: rz file
+download: sz file
 ```
 
 ## Build Aliyun
@@ -179,5 +188,5 @@ docker push $repo/$ns/alpine-ext:$ver
 
 ## Contribute
 
-Alpine-ext is an open source project under the Apache 2.0 license, and contributions are gladly welcomed!
+`alpine-ext` is an open source project under the Apache 2.0 license, and contributions are gladly welcomed!
 To submit your changes please open a pull request.
