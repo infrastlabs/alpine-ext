@@ -4,7 +4,7 @@
 
 > Basic top alpine docker images with tmux/lrzsz/gosu/... and other init sys soft and dotfiles aim at lite and better image use. 
 
- **[Alpine-ext](https://hub.docker.com/r/infrastlabs/alpine-ext)** Image based on `alpine-3.8_glibc-2.28` from `frolvlad/alpine-glibc`
+ **[Alpine-ext](https://hub.docker.com/r/infrastlabs/alpine-ext)** Image based on `alpine-3.8_glibc-2.28` from `frolvlad/alpine-glibc`. (Size at ~30MB)
 
 ### Tags
 
