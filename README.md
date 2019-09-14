@@ -153,7 +153,7 @@ gsc drop #drop suid of gosu, for safety
 EOF
 chmod +x $file
 
-printf "gosu exec as root:(exec when container fist startup)"
+printf "gosu exec as root:(exec when container first startup)"
 gosu root bash -c $file && rm -f $file
 ```
 
