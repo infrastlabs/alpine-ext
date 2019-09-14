@@ -117,7 +117,7 @@ docker inspect frolvlad/alpine-glibc:alpine-3.8_glibc-2.28 -f "{{.RepoDigests}}"
 
 - tmux
 
-Tmux 2.3, vim compatible with vim 8.1
+Tmux 2.3, compatible with vim 8.1
 
 ```bash
 entry:
