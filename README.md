@@ -11,7 +11,7 @@
 ### Tags
 
 * bin (downloading and compiling binaries for alpine-ext.)
-* latest (alpine-ext images.)
+* latest (alpine-ext image.)
 * example (sub example with grpasswd, gosu usage.)
 
 ### Features
