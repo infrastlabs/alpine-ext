@@ -2,7 +2,7 @@
 
 > Lite secure and better use image based on alpine with tmux/gosu/lrzsz/... and other init sys soft and dotfiles.(~30MB) 
 
-## [QuickStart](quickstart.md)
+## [QuickStart (github)](https://github.com/infrastlabs/alpine-ext/blob/master/quickstart.md)
 
 ## Intro
 
