@@ -2,7 +2,12 @@
 
 > Lite secure and better use image based on alpine with tmux/gosu/lrzsz/... and other init sys soft and dotfiles.(~30MB) 
 
-## [QuickStart (github)](https://github.com/infrastlabs/alpine-ext/blob/master/quickstart.md)
+`docker run -it --rm -u root infrastlabs/alpine-ext bash`
+
+![](images/apine-ext-tmux.png)
+
+
+## [Example](https://github.com/infrastlabs/alpine-ext/blob/master/example.md)
 
 ## Intro
 

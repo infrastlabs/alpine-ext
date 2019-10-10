@@ -1,15 +1,8 @@
-# QuickStart
-
-## alpine-ext
-- `alpine-ext:latest` with tmux (run with container's user `root`)
-
-`docker run -it --rm -u root infrastlabs/alpine-ext bash`
-
-![](images/apine-ext-tmux.png)
+# Example
 
 ## alpine-ext:example
 
-- `alpine-ext:example` with gosu (exec in bash: `su` with root's pw `root`)
+- `alpine-ext:example` with gosu
 
 `docker run -it --rm infrastlabs/alpine-ext:example`
 
