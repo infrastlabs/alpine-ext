@@ -6,6 +6,8 @@
 
 `docker run -it --rm infrastlabs/alpine-ext:example`
 
+![](images/example-grpasswd-gosu.png)
+
 `entry.sh` in example:
 
 ```bash
@@ -32,6 +34,4 @@ gsc add entry
 
 exec /bin/bash
 ```
-
-![](images/example-grpasswd-gosu.png)
 
