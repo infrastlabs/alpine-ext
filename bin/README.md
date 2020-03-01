@@ -1,3 +1,3 @@
 # alpine-ext:bin
 
-> downloading and compileing binaries for alpine-ext.
+> download and compile binaries for alpine-ext
