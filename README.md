@@ -5,8 +5,8 @@
 
 ## Directories
 
-* [src](docs/README.md) (the `Alpine-ext` image.)
-* [example](docs/example.md) (sub images base on `Alpine-ext`, with grpasswd, gosu usage.)
+* [src](docs/README.md) (Detail usage of `Alpine-ext` image)
+* [example](docs/example.md) (Sub image of `Alpine-ext`, with `grpasswd`, `gosu` usage)
 * [binary](docs/binary.md)
 
 ## QuickStart
@@ -16,15 +16,17 @@
 
 ## Features
 
-Alpine-ext with following features:
+Alpine-ext with following initial:
 
 * apk mirror aliyun/ustc (China)
 * TIMEZONE Asia/Shanghai (China)
-* binary: tmux, gosu, lrzsz
 * apks: curl wget sed grep gawk findutils sudo tree unzip procps htop bash bash-completion vim
+* 
+* binary: `tmux`, `gosu`, `lrzsz`
+* shell-bins: `gosuctl` `epasswd` `erpasswd`
 * dotfiles: .bashrc .profile .tmux.conf
-* gosuctl: gsc add xxx; gsc drop
-* init user: root, entry
+* init user: `root`, `entry`
+
 
 ![tmux-preview](docs/img-apine-ext-tmux.png)
 
