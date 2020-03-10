@@ -1,3 +1,9 @@
-.idea
+.settings
+*.classpath
+*.project
 *.iml
-_ex
+.idea
+.vscode
+
+*.vswp
+*.docx
