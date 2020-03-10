@@ -1,22 +1,31 @@
 #!/usr/bin/env bash
 echo $@
 
-#scripts to run
-file=/tmp/gosu-root.sh
+function test_gosu_usage(){
+    #scripts to run
+    file=/tmp/gosu-root.sh
 cat > $file <<EOF
-ls -la /root
-chown -R www:www /srv #test
-erpasswd root
-epasswd root root  #rechange root's pw to: root (example with weak password)
-gsc drop #add this
+echo "--test root's permission---"
+ls -la /root          #test1
+chown -R www:www /srv #test2
+
+echo "--reset root's password---"
+erpasswd root      #random password
+epasswd root root  #set password to `root`
+
+echo "--drop root's permision---"
+gsc drop #drop root's permision
 EOF
-chmod +x $file
+    chmod +x $file
 
-printf "\ngosu exec as root:\n"
-gosu root bash -c $file && rm -f $file
+    printf "\n>>gosu exec as root--------------------\n"
+    gosu root bash -c $file && rm -f $file
 
-printf "\nvalidate dropd permission:\n"
-gosu root ls -la /root
-gsc add entry
+    printf "\n>>Root's exec finished, Validate droped permission-----------------\n"
+    gosu root ls -la /root
+    gsc add entry #try grant root's permision for `entry`
+}
+
+test_gosu_usage()
 
 exec /bin/bash
