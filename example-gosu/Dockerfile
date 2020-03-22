@@ -1,5 +1,6 @@
 #latest
-FROM registry.cn-shenzhen.aliyuncs.com/infrastlabs/alpine-ext
+ARG repo=docker.io
+FROM ${repo}/infrastlabs/alpine-ext
 MAINTAINER sam <sldevsir@126.com>
 
 USER root

@@ -1,5 +1,5 @@
-ARG parent=infrastlabs/alpine-ext:bin
-FROM ${parent} as src
+ARG repo=docker.io
+FROM ${repo}/infrastlabs/alpine-ext:bin as src
 
 #FROM frolvlad/alpine-glibc:alpine-3.8_glibc-2.28
 FROM frolvlad/alpine-glibc@sha256:51d816dfedfaf89e52319add7cf5849dbf7295ec8980ca4a58ac963aa1485a10

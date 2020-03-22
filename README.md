@@ -39,4 +39,4 @@ To submit your changes please open a pull request.
 
 ## TODO
 
-- $ns param for both dockerhub/aliyun
+- ~~$repo param for both dockerhub/aliyun~~ Done.
