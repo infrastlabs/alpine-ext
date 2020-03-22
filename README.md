@@ -5,7 +5,7 @@
 
 ## Directories
 
-* [binary](docs/binary.md) (`lrzsz`, `goso`, `tmux`)
+* [binary](docs/binary.md) (`lrzsz`, `gosu`, `tmux`)
 * [src](docs/README.md) (detail usage of `Alpine-ext` image)
 * [example-gosu](docs/example-gosu.md) (sub image of `Alpine-ext`, with `grpasswd`, `gosu` usage)
 * [example-weak](docs/example-weak.md) (just a tag for convinience, with weak password `root:root` `entry:entry`)
