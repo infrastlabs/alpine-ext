@@ -35,3 +35,7 @@ Alpine-ext with following initial:
 
 `Alpine-ext` is an open source project under the Apache 2.0 license, and contributions are gladly welcomed!
 To submit your changes please open a pull request.
+
+## TODO
+
+- $ns param for both dockerhub/aliyun
