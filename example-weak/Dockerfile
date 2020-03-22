@@ -9,6 +9,6 @@ RUN sh /build.sh
 
 ##run as root
 USER root
-WORKDIR /
-ENTRYPOINT ["/bin/bash"]
+WORKDIR /root
+# ENTRYPOINT ["/bin/bash"]
 
