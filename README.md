@@ -6,7 +6,8 @@
 ## Directories
 
 * [src](docs/README.md) (Detail usage of `Alpine-ext` image)
-* [example](docs/example.md) (Sub image of `Alpine-ext`, with `grpasswd`, `gosu` usage)
+* [example-gosu](docs/example.md) (Sub image of `Alpine-ext`, with `grpasswd`, `gosu` usage)
+* example-weak (just a tag for convinience, with weak password `root:root` `entry:entry`)
 * [binary](docs/binary.md)
 
 ## QuickStart
