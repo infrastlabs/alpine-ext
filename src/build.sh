@@ -116,7 +116,7 @@ EOF
 echo "export TERM=xterm" >> /etc/profile
 
 ##user entry
-useradd -m -d /home/entry -s /bin/bash -u 664 entry
+useradd -m -d /home/entry -s /bin/bash -u 664 entry #id 664
 echo 'entry ALL = (ALL)  ALL' >> /etc/sudoers
 
 #rootpw: erpasswd in example
