@@ -1,5 +1,5 @@
 #latest
-FROM infrastlabs/alpine-ext
+FROM registry.cn-shenzhen.aliyuncs.com/infrastlabs/alpine-ext
 MAINTAINER sam <sldevsir@126.com>
 
 USER root
