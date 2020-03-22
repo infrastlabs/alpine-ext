@@ -13,7 +13,8 @@ cur=$(cd "$(dirname "$0")"; pwd)
 
 #bin
 parent=$repo/$ns/alpine-ext:$ver
-#docker build --pull -t $parent $cur/bin/.
+#docker build --pull -t $parent $cur/binary/.
+#docker push $parent
 
 #src
 ver=latest #v1.0

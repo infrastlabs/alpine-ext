@@ -13,7 +13,8 @@
 ## QuickStart
 
 - docker hub: `docker run -it --rm -u root infrastlabs/alpine-ext bash`
-- aliyun registry: `docker run -it --rm -u root registry.cn-shenzhen.aliyuncs.com/k-pub/alpine-ext:v1.0 bash`
+- aliyun registry: `docker run -it --rm -u root registry.cn-shenzhen.aliyuncs.com/infrastlabs/alpine-ext bash`
+- weak for debug: `docker run -it --rm registry.cn-shenzhen.aliyuncs.com/infrastlabs/alpine-ext:weak bash`
 
 ## Features
 
