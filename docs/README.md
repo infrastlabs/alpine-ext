@@ -1,6 +1,5 @@
 # Alpine-ext detail
 
-
 ## Shell-bins
 
 * `gsc` : gosuctl (`gsc add entry`, `gsc drop`)
@@ -17,12 +16,11 @@ The environment variables can be used to configure SSH server
 | LANG     | C.UTF-8       |             |
 | VER      | v1.0          |             |
 
-
 ## lrzsz usage
 
 When in windows or ZModem supported, you can use `rz`/`sz` for quick file transmission
 
-```
+```text
   upload: rz file
 download: sz file
 ```
@@ -37,7 +35,7 @@ tmux #new
 tmux att -dt 0 #exist
 ```
 
-```
+```text
 control:
   super: ctrl+a
 split v: super + \
@@ -81,7 +79,7 @@ gosu root bash -c $file && rm -f $file
 
 - CAIID
 
-```
+```bash
 docker inspect frolvlad/alpine-glibc:alpine-3.8_glibc-2.28 -f "{{.RepoDigests}}"
 [frolvlad/alpine-glibc@sha256:51d816dfedfaf89e52319add7cf5849dbf7295ec8980ca4a58ac963aa1485a10]
 ```
@@ -90,7 +88,7 @@ docker inspect frolvlad/alpine-glibc:alpine-3.8_glibc-2.28 -f "{{.RepoDigests}}"
 
 `for i in $(find / -type f \( -perm +6000 -o -perm +2000 \)); do chmod ug-s $i; done`
 
-```
+```bash
 /usr/bin/passwd
 /usr/bin/chage
 /usr/bin/sudo
@@ -104,7 +102,7 @@ docker inspect frolvlad/alpine-glibc:alpine-3.8_glibc-2.28 -f "{{.RepoDigests}}"
 /sbin/unix_chkpwd
 ```
 
-## Build to aliyun
+## Build to docker.io/aliyun
 
 - registry login
 
@@ -119,15 +117,16 @@ echo "${DOCKER_REGISTRY_PW}" |docker login --username=${DOCKER_REGISTRY_USER} --
 - build push
 
 ```bash
-ns=infrastlabs #k-pub
-ver=v1.0 #latest
-cur=$(cd "$(dirname "$0")"; pwd) 
+ns=infrastlabs
+cur=$(cd "$(dirname "$0")"; pwd)
 
 #bin
-parent=$repo/$ns/alpine-ext-bin:$ver
-#docker build --pull -t $parent $cur/bin/.
+ver=bin
+parent=$repo/$ns/alpine-ext:$ver
+docker build --pull -t $parent $cur/bin/.
+
 #src
+ver=v1.0 #latest
 docker build --pull -t $repo/$ns/alpine-ext:$ver --build-arg parent=$parent  $cur/src/. 
 docker push $repo/$ns/alpine-ext:$ver
 ```
-
