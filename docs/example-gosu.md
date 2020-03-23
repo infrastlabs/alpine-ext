@@ -27,7 +27,7 @@ There be a sub image of Alpine-ext. With following steps to test the feature of 
 
 ## QuickStart
 
-`docker run -it --rm infrastlabs/alpine-ext:example`
+`docker run -it --rm infrastlabs/alpine-ext:gosu`
 
 ![](img-example-grpasswd-gosu.png)
 
