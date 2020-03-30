@@ -28,3 +28,12 @@ nslookup - 172.17.0.171
 >set port=xxx
 >qq.com
 ```
+
+## jump-agent
+
+ssh agent for `k8s-jumpserver`, `SSHD_ENABLE=true` to enable dropbear as the default ssh-server.  
+it's with weak password in all the accounts `root/entry/ctapp/ctoper`, you can with a sub-images use `epasswd/erpasswd` to change it.
+
+- dropbear
+- openssh-sftp-server
+- useradd ctapp, ctoper

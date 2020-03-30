@@ -11,5 +11,6 @@ RUN sh /build.sh
 ##run as root
 USER root
 WORKDIR /root
-# ENTRYPOINT ["/bin/bash"]
 
+# ENTRYPOINT ["/bin/bash"]
+CMD /entry.sh
