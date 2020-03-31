@@ -5,3 +5,5 @@
 if [ "$SSHD_ENABLE" = "true" ]; then
   dropbear -E -F -R -p 22 
 fi
+
+/bin/bash
