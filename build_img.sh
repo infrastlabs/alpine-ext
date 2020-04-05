@@ -4,9 +4,9 @@
 #registry
 # repo=docker.io
 repo=registry.cn-shenzhen.aliyuncs.com
-source ~/.auth-docker-registry #set DOCKER_REGISTRY_PW DOCKER_REGISTRY_USER
+source /etc/profile #~/.auth-docker-registry #set DOCKER_REGISTRY_PW DOCKER_REGISTRY_USER
 #export |grep DOCKER_REG
-echo "${DOCKER_REGISTRY_PW_sldevdir}" |docker login --username=${DOCKER_REGISTRY_USER_sldevdir} --password-stdin $repo
+echo "${DOCKER_REGISTRY_PW_sdsir}" |docker login --username=${DOCKER_REGISTRY_USER_sdsir} --password-stdin $repo
 
 ns=infrastlabs
 cur=$(cd "$(dirname "$0")"; pwd) 
