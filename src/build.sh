@@ -4,6 +4,8 @@ set +e
 #etc
 chmod u+s /bin/ping
 echo "welcome to ct~ (alpine-ext: ${VER}})" > /etc/motd
+# echo -n "Kernel: "     >>/etc/motd
+# uname -a               >>/etc/motd #TODO `uname -a`
 sed -i 's^/root:/bin/ash^/root:/bin/bash^g' /etc/passwd #root use bash
 echo "Defaults visiblepw" >> /etc/sudoers
 
