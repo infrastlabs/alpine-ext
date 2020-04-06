@@ -10,6 +10,10 @@
 * [example-gosu](docs/example-gosu.md) (sub image of `Alpine-ext`, with `grpasswd`, `gosu` usage)
 * [example-weak](docs/example-weak.md) (just a tag for convinience, with weak password `root:root` `entry:entry`)
 
+<p align="center">
+⭐️ <strong>Do you like Alpine-ext? Support the project with a star</strong> ⭐️
+</p>
+
 ## QuickStart
 
 - docker hub: `docker run -it --rm -u root infrastlabs/alpine-ext bash`
