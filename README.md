@@ -2,6 +2,9 @@
 
  **[Alpine-ext](https://hub.docker.com/r/infrastlabs/alpine-ext)** an alpine extend Image based on `alpine-3.8_glibc-2.28` from `frolvlad/alpine-glibc`. With optimization and the essential apks like `tmux` `gosu` `lrzsz` `wget` `tree` `procps` `bash` preinstalled , for **lite** **secure** and **convenience**. (Size at ~30MB)
 
+<p align="center">
+⭐️ <strong>Do you like Alpine-ext? Support the project with a star</strong> ⭐️
+</p>
 
 ## Directories
 
@@ -9,10 +12,6 @@
 * [src](docs/README.md) (detail usage of `Alpine-ext` image)
 * [example-gosu](docs/example-gosu.md) (sub image of `Alpine-ext`, with `grpasswd`, `gosu` usage)
 * [example-weak](docs/example-weak.md) (just a tag for convinience, with weak password `root:root` `entry:entry`)
-
-<p align="center">
-⭐️ <strong>Do you like Alpine-ext? Support the project with a star</strong> ⭐️
-</p>
 
 ## QuickStart
 
