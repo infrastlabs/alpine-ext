@@ -6,6 +6,8 @@
 ⭐️ <strong>[Do you like Alpine-ext? Support the project with a star](https://github.com/infrastlabs/alpine-ext)</strong> ⭐️
 </p>
 
+⭐️⭐️ [Do you like Alpine-ext? Support the project with a star](https://github.com/infrastlabs/alpine-ext)
+
 ## Directories
 
 * [binary](docs/binary.md) (`lrzsz`, `gosu`, `tmux`)
