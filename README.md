@@ -2,9 +2,6 @@
 
  **[Alpine-ext](https://hub.docker.com/r/infrastlabs/alpine-ext)** an alpine extend Image based on `alpine-3.8_glibc-2.28` from `frolvlad/alpine-glibc`. With optimization and the essential apks like `tmux` `gosu` `lrzsz` `wget` `tree` `procps` `bash` preinstalled , for **lite** **secure** and **convenience**. (Size at ~30MB)
 
-
-⭐️[**Do you like Alpine-ext? Support the project with a star**](https://github.com/infrastlabs/alpine-ext)⭐️
-
 ## Directories
 
 * [binary](docs/binary.md) (`lrzsz`, `gosu`, `tmux`)
@@ -17,6 +14,8 @@
 - docker hub: `docker run -it --rm -u root infrastlabs/alpine-ext bash`
 - aliyun registry: `docker run -it --rm -u root registry.cn-shenzhen.aliyuncs.com/infrastlabs/alpine-ext bash`
 - weak for debug: `docker run -it --rm registry.cn-shenzhen.aliyuncs.com/infrastlabs/alpine-ext:weak bash`
+
+⭐️[**Do you like Alpine-ext? Support the project with a star**](https://github.com/infrastlabs/alpine-ext)⭐️
 
 ## Features
 
