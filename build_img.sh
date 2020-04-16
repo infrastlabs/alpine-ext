@@ -23,7 +23,7 @@ ver=latest #v1.0
 # docker push $repo/$ns/alpine-ext:$ver
 
 #example-gosu/weak
-docker build --pull -t $repo/$ns/alpine-ext:gosu --build-arg repo=$repo $cur/example-gosu/.
-docker push $repo/$ns/alpine-ext:gosu
+# docker build --pull -t $repo/$ns/alpine-ext:gosu --build-arg repo=$repo $cur/example-gosu/.
+# docker push $repo/$ns/alpine-ext:gosu
 docker build --pull -t $repo/$ns/alpine-ext:weak --build-arg repo=$repo $cur/example-weak/.
 docker push $repo/$ns/alpine-ext:weak
