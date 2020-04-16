@@ -14,6 +14,11 @@ apk add dropbear openssh-sftp-server
 apk add python #jumpserver get listInfo need python
 mkdir /etc/dropbear
 echo 'Cmnd_Alias SU = /bin/su' >> /etc/sudoers
+echo 'ctoper ALL=(root) NOPASSWD: SU' >> /etc/sudoers
+
+#drop entry user
+userdel entry #del user: entry
+sed -i '/^entry/d' /etc/sudoers #drop: # echo 'entry ALL = (ALL)  ALL' >> /etc/sudoers
 
 #ctapp, ctoper
 useradd -m -d /home/ctapp  -s /bin/bash -u 665 ctapp #665
