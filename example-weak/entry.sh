@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #echo $@
 
-runDropbear
+runDropbear #when $SSHD_ENABLE=true
 
 # /bin/bash
 exec $@ #trans exec
