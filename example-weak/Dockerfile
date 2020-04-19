@@ -12,5 +12,5 @@ RUN sh /build.sh
 USER root
 WORKDIR /root
 
-# ENTRYPOINT ["/bin/bash"]
-CMD /entry.sh
+ENTRYPOINT ["/entry.sh"]
+# CMD /entry.sh #CMD ["bash", "-c", "tail -f /dev/null"]

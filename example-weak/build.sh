@@ -26,4 +26,12 @@ epasswd ctapp ctapp
 useradd -m -d /home/ctoper -s /bin/bash -u 666 ctoper
 epasswd ctoper ctoper
 
+runDropbear=/usr/local/bin/runDropbear && touch $runDropbear && chmod +x $runDropbear
+cat > $runDropbear <<EOF
+#dropbear
+if [ "\$SSHD_ENABLE" = "true" ]; then
+  dropbear -E -F -R -p 22 -b /etc/motd &
+fi
+EOF
+
 rm -f /build.sh
