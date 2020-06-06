@@ -28,9 +28,6 @@ epasswd ctoper ctoper
 
 runDropbear=/usr/local/bin/runDropbear && touch $runDropbear && chmod +x $runDropbear
 cat > $runDropbear <<EOF
-#load env
-source /etc/profile
-
 #dropbear
 if [ "\$SSHD_ENABLE" = "true" ]; then
   dropbear -E -F -R -p 22 -b /etc/motd &
